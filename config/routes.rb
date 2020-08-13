@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root 'homes#top'
+
   namespace :user do
     get 'varieties/index'
     get 'varieties/show'
