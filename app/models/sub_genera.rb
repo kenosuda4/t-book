@@ -1,0 +1,2 @@
+class SubGenera < ApplicationRecord
+end
