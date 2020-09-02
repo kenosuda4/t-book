@@ -1,0 +1,2 @@
+module Admin::GenerasHelper
+end

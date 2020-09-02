@@ -1,0 +1,2 @@
+module SubGenerasHelper
+end

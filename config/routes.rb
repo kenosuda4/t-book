@@ -1,4 +1,20 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    get 'generas/index'
+    get 'generas/show'
+    get 'generas/edit'
+  end
+  namespace :admin do
+    get 'sub_generas/index'
+    get 'sub_generas/show'
+    get 'sub_generas/edit'
+  end
+  get 'varieties/index'
+  get 'varieties/show'
+  get 'sub_generas/index'
+  get 'sub_generas/show'
+  get 'generas/index'
+  get 'generas/show'
   root 'home#top'
 
   namespace :user do
@@ -22,16 +38,6 @@ Rails.application.routes.draw do
     get 'varieties/show'
     get 'varieties/new'
     get 'varieties/edit'
-  end
-  namespace :admin do
-    get 'sub_genera/index'
-    get 'sub_genera/show'
-    get 'sub_genera/edit'
-  end
-  namespace :admin do
-    get 'genera/index'
-    get 'genera/show'
-    get 'genera/edit'
   end
   # devise admin
   devise_for :admins, controllers: {

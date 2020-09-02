@@ -38,21 +38,7 @@ ActiveRecord::Schema.define(version: 2020_08_13_033621) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "genus", force: :cascade do |t|
-    t.string "name"
-    t.text "detail"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "sub_generas", force: :cascade do |t|
-    t.string "name"
-    t.text "detail"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "sub_genus", force: :cascade do |t|
     t.string "name"
     t.text "detail"
     t.datetime "created_at", null: false
