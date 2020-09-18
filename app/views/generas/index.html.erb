@@ -1,3 +1,5 @@
 <% @generas.each do |genera| %>
-    <%= genera.name %>
+    <%= link_to genera_path(genera), class: "btn-link" do %>
+        <strong><%= genera.name %>属</strong>
+      <% end %>
 <% end %>

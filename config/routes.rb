@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   end
 
   resources :generas, only: [:index, :show]
+  resources :sub_generas, only: [:index, :show]
+  resources :varieties, only: [:index, :show, :edit]
+  
   
   namespace :user do
     get 'varieties/index'
