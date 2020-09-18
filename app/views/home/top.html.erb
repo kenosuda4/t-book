@@ -6,6 +6,18 @@
   </div>
 </div>
 
+<div class ="top-genera">
+  <div class="top-genera-info">
+    現在育てている植物の種類です。
+    主にチランジア(ティランジア)が多いです。
+  </div>
+  <% @generas.each do |genera| %>
+    <%= link_to genera_path(genera), class: "btn-link" do %>
+      <strong><%= genera.name %>属</strong>
+    <% end %>
+  <% end %>
+</div>
+
 <div class="top-slider">
    <div class="slider">
    <%= image_tag 'top/topimg_1.jpeg' %>
