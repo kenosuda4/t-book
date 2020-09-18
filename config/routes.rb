@@ -1,22 +1,18 @@
 Rails.application.routes.draw do
-  namespace :admin do
-    get 'generas/index'
-    get 'generas/show'
-    get 'generas/edit'
-  end
-  namespace :admin do
-    get 'sub_generas/index'
-    get 'sub_generas/show'
-    get 'sub_generas/edit'
-  end
-  get 'varieties/index'
-  get 'varieties/show'
-  get 'sub_generas/index'
-  get 'sub_generas/show'
-  get 'generas/index'
-  get 'generas/show'
-  root 'home#top'
 
+  root 'home#top'
+  
+  namespace :admin do
+    resources :generas, only: [:index, :show, :edit]
+    resources :sub_generas, only: [:index, :show, :edit]
+    resources :varieties, only: [:index, :show, :edit]
+  end
+
+  resources :generas, only: [:index, :show]
+  resources :sub_generas, only: [:index, :show]
+  resources :varieties, only: [:index, :show, :edit]
+  
+  
   namespace :user do
     get 'varieties/index'
     get 'varieties/show'
@@ -33,12 +29,7 @@ Rails.application.routes.draw do
     get 'genera/show'
     get 'genera/edit'
   end
-  namespace :admin do
-    get 'varieties/index'
-    get 'varieties/show'
-    get 'varieties/new'
-    get 'varieties/edit'
-  end
+
   # devise admin
   devise_for :admins, controllers: {
     sessions:      'admins/sessions',

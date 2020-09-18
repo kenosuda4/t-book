@@ -10,3 +10,8 @@ Admin.create!(
    email: 'test@test.com',
    password: 'testtest',
 )
+
+Genera.create!(
+   name: 'Tillandsia',
+   detail: 'チランジア',
+)

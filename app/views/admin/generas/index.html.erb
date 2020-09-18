@@ -1,7 +1,7 @@
 <div class="genera-top">
 </div>
 <div class="genera-new">
-    <%= form_for @genera, class: "form-control" do |f| %>
+    <%= form_for @genera, url: admin_generas_path, method: :post,  class: "form-control" do |f| %>
         <%= f.label :name %>
         <%= f.text_field :name, class: "form-control" %>
         <%= f.label :detail %>
@@ -10,4 +10,8 @@
     <% end %>
 </div>
 <div class="genera-all">
+    <% @generas.each do |genera| %>
+        <%= genera.name %>属
+        <%= genera.detail %>
+    <% end %>
 </div<
